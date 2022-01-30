@@ -90,7 +90,7 @@ int check(void){
         system("cls");
     }
     print_grid(grid_size);
-    if (moves < 9){
+    
         if (pos[0] == 'X' && pos[3] == 'X' && pos[6] == 'X'){
             printf("\nPlayer ONE WINS \n");
             return 1;
@@ -159,16 +159,19 @@ int check(void){
             return 1;
         }
         else{
+            if (moves < 9){
             play();
             return 0;
-        }
-    }
-    else{
-        system("cls");
-        print_grid(grid_size);
-        printf("!!! DRAW !!! \n\n");
+            }
+            else{
+            system("cls");
+            print_grid(grid_size);
+            printf("!!! DRAW !!! \n\n");
 
     }
+        }
+    
+    
 }
 
 void play(){
